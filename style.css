@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Serif Display', serif;
+}
+
+#app {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    transition: background-color 2000ms;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 100px
+}
+
+#advice {
+    font-size: 2em;
+    text-align: center;
+    transition: opacity 500ms;
+    color: #666;
+}
+
+.btn {
+    padding: 10px 30px;
+    border: 0;
+    font-size: 1.5em;
+    background-color: #555;
+    color: #fff;
+    transition: opacity 500ms;
+    border-radius: 10px;
+}

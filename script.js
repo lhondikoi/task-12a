@@ -3,12 +3,14 @@ app = document.querySelector('#app')
 btn = document.querySelector('.btn')
 
 function getNewAdvice() {
-    btn.style.opacity = 0
-    advHolder.style.opacity = 0
-    setTimeout(()=> {
-        btn.style.opacity = 1
-        advHolder.style.opacity = 1
-    }, 1000)
+    if (!intial) {
+        btn.style.opacity = 0
+        advHolder.style.opacity = 0
+        setTimeout(()=> {
+            btn.style.opacity = 1
+            advHolder.style.opacity = 1
+        }, 1000)
+    }
     fetch('https://api.adviceslip.com/advice')
     .then(r => r.json())
     .then(d => {
@@ -20,5 +22,5 @@ function getNewAdvice() {
 }
 
 window.addEventListener('load', () => {
-    getNewAdvice();
+    getNewAdvice(true);
 })

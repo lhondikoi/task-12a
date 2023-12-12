@@ -2,8 +2,8 @@ advHolder = document.querySelector('#advice')
 app = document.querySelector('#app')
 btn = document.querySelector('.btn')
 
-function getNewAdvice() {
-    if (!intial) {
+function getNewAdvice(initial) {
+    if (!initial) {
         btn.style.opacity = 0
         advHolder.style.opacity = 0
         setTimeout(()=> {
